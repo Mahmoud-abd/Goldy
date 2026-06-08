@@ -2,8 +2,9 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:flutter_project/core/routing/ruotes.dart';
-
+import 'package:goldy/core/routing/ruotes.dart';
+import 'package:goldy/feature/gold_screen/views/gold_screen.dart';
+import 'package:goldy/feature/silver_screen/views/silver_screen.dart';
 import '../../feature/home_screen.dart';
 
 class AppRouters {
@@ -11,10 +12,22 @@ class AppRouters {
     switch (settings.name){
       case AppRoutes.homescreen:
       return MaterialPageRoute(
-          builder: (context){
+          builder: (context) {
             return HomeScreen();
           }
       );
+      case AppRoutes.golgscreen:
+      return MaterialPageRoute(
+    builder: (context) {
+      return GoldScreen();
+    }
+    );
+      case AppRoutes.silverscreen:
+        return MaterialPageRoute(
+            builder: (context) {
+              return SilverScreen();
+            }
+        );
       default :
         return MaterialPageRoute(builder: (context) {
           return Scaffold(

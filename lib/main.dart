@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project/core/routing/routers.dart';
-import 'package:flutter_project/core/routing/ruotes.dart';
+import 'package:goldy/core/networking/dio_halper.dart';
+import 'package:goldy/core/routing/routers.dart';
+import 'package:goldy/core/routing/ruotes.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await DioHalper.int();
   runApp(const MyApp());
 }
 

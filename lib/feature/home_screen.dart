@@ -1,10 +1,11 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:flutter_project/core/constants/app_colors.dart';
-import 'package:flutter_project/core/constants/app_streings.dart';
 
-import 'package:flutter_project/core/widgets/costem_button.dart';
+import 'package:goldy/core/constants/app_colors.dart';
+import 'package:goldy/core/constants/app_streings.dart';
+import 'package:goldy/core/routing/ruotes.dart';
+import 'package:goldy/core/widgets/costem_button.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -18,9 +19,13 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CustomButton(text:AppStrings.gold , onPressed: () {}, color: AppColors.goldColor),
+          CustomButton(text:AppStrings.gold , onPressed: () {
+            Navigator.pushNamed(context, AppRoutes.golgscreen);
+          }, color: AppColors.goldColor),
           SizedBox(height: 20,),
-          CustomButton(text:AppStrings.silver , onPressed: () {}, color: AppColors.sliverColor)
+          CustomButton(text:AppStrings.silver , onPressed: () {
+            Navigator.pushNamed(context, AppRoutes.silverscreen);
+          }, color: AppColors.sliverColor)
         ],
       ),
     );
